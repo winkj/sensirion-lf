@@ -1,4 +1,6 @@
-## Experimental Arduino library for Sensirion liquid flow sensors
+## Experimental Arduino library for Sensirion liquid flow sensors 
+
+[![Build Status](https://travis-ci.org/winkj/sensirion-lf.svg?branch=master)](https://travis-ci.org/winkj/sensirion-lf)
 
 This is an Arduino library for the Sensirion Liquid Flow sensors, based on the
 github snippet page at https://github.com/Sensirion/arduino-liquid-flow-snippets
