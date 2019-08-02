@@ -48,8 +48,7 @@ static const uint8_t SLF3X_I2C_ADDRESS = 0x08;
 // static const uint8_t LD20_I2C_ADDRESS = 0x08;
 
 static const uint8_t  CMD_START_MEASUREMENT_LENGTH = 2;
-static const uint8_t
-  CMD_START_MEASUREMENT[CMD_START_MEASUREMENT_LENGTH] = { 0x36, 0x08 };
+static const uint8_t  CMD_START_MEASUREMENT[CMD_START_MEASUREMENT_LENGTH] = { 0x36, 0x08 };
 static const uint8_t  DATA_LENGTH = 9;
 
 static const uint8_t  SOFT_RESET_I2C_ADDRESS = 0x0;
