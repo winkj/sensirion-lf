@@ -71,7 +71,7 @@ void loop() {
     if (SLF3X.isAirInLineDetected()) {
       Serial.print(" [Air in Line Detected]");
     }
-    if (SLF3X.isAirInLineDetected()) {
+    if (SLF3X.isHighFlowDetected()) {
       Serial.print(" [High Flow Detected]");
     }
     Serial.print("\n");
