@@ -46,6 +46,9 @@ public:
   float getFlow() const { return mFlow; }
   float getTemp() const { return mTemp; }
 
+  bool isAirInLineDetected() const { return mAirInLineDetected; }
+  bool isHighFlowDetected()  const { return mHighFlowDetected;  }
+
 private:
   uint8_t crc8(const uint8_t* data, uint8_t len);
   int8_t  i2c_read(uint8_t addr, uint8_t* data, uint16_t count);
@@ -64,6 +67,9 @@ private:
 
   float   mFlow;
   float   mTemp;
+
+  bool mAirInLineDetected;
+  bool mHighFlowDetected;
 };
 
 extern SensirionLF SLF3X;

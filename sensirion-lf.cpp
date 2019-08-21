@@ -66,7 +66,9 @@ SensirionLF::SensirionLF(float flowScaleFactor,
                          uint8_t i2cAddress)
     : mFlowScaleFactor(flowScaleFactor),
       mTempScaleFactor(tempScaleFactor),
-      mI2cAddress(i2cAddress)
+      mI2cAddress(i2cAddress),
+      mAirInLineDetected(false),
+      mHighFlowDetected(false)
 {
 }
 
@@ -91,6 +93,8 @@ int8_t SensirionLF::readSample()
   }
   mFlow = convert_and_scale(data[0], data[1], mFlowScaleFactor);
   mTemp = convert_and_scale(data[3], data[4], mTempScaleFactor);
+  mAirInLineDetected = data[7]       & 1U;
+  mHighFlowDetected = (data[7] >> 1) & 1U;
   return 0;
 }
 

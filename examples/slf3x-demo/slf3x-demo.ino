@@ -66,7 +66,15 @@ void loop() {
 
     Serial.print(" | Temp: ");
     Serial.print(SLF3X.getTemp(), 1);
-    Serial.println(" deg C");
+    Serial.print(" deg C");
+
+    if (SLF3X.isAirInLineDetected()) {
+      Serial.print(" [Air in Line Detected]");
+    }
+    if (SLF3X.isAirInLineDetected()) {
+      Serial.print(" [High Flow Detected]");
+    }
+    Serial.print("\n");
 #endif /* GENERATE_PLOTTER_OUTPUT */
   } else {
     Serial.print("Error in SLF3X.readSample(): ");
