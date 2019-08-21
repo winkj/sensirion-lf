@@ -62,7 +62,7 @@ void loop() {
 #else
     Serial.print("Flow: ");
     Serial.print(SLF3X.getFlow(), 2);
-    Serial.print(" ml/h");
+    Serial.print(" ml/min");
 
     Serial.print(" | Temp: ");
     Serial.print(SLF3X.getTemp(), 1);
